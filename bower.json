@@ -1,0 +1,21 @@
+{
+  "name": "Site",
+  "homepage": "https://github.com/leandroti7/criando-um-site-responsivo",
+  "authors": [
+    "Leandro Suza <leandro.dasilvati7@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
+}
