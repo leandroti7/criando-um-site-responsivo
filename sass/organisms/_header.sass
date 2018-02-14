@@ -1,0 +1,83 @@
+header
+	+clearfix
+	min-height: 521px
+	position: relative
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 44px
+		+gradient(130deg, $verde, $azul)
+
+	background:
+		image: url('../images/slide_index-1.jpg') //linkando o slide do topo
+		position: top center //centralizar no topo
+		repeat: no-repeat 
+		color: $preto // prencher as laterais em display maiores com a cor preto
+		attachment: fixed // fixar o slide do topo quando a pagina for rolada para cima 
+		size: cover // aumentar o tamanho do slide do topo conforme a resolução do dispositivo
+
+
+	.logo //propriedados do logo do topo
+		float: left
+		margin: 40px 0 0 0
+		img
+			width: 197px
+			heigth: 134px
+
+	.links // propriedades do menu bar 
+		float: right
+		margin: 80px 0 0 0
+		nav,   //Posicioandno o menu na tag <nav> e social da classe .social um do lado do outro ambos dentro da calsse .links
+		.social
+			display: inline-block
+
+		nav
+			+breakpoint ($tablet)
+				display: none
+				
+
+			+breakpoint ($celular)
+				display: none
+			ul
+				li
+					margin: 0 20px 0 0
+					display: inline-block
+					a
+						color: $branco // Chamando a cor da variavel 
+						text-transform: uppercase
+
+		.social
+			li
+				display: inline-block
+				margin: 0 10px 0 0
+				a
+					color: $branco
+					display: block
+					border: 1px solid $branco
+					padding: 4px
+					width: 25px
+					height: 25px
+					line-height: 12px
+					text-align: center
+					+border-radius(120px)
+
+	h1 
+		clear: both
+		margin: 230px auto 30px auto !important
+		font-weight: $light 
+		border: 3px solid $branco
+		padding: 10px 38px
+		display: table
+		+breakpoint($celular)
+			+font-size(25px)
+
+
+	h1,
+	p
+		color: $branco
+		text-align: center
+		text-transform: uppercase
