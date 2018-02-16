@@ -1,2 +1,100 @@
-.slide
-	 width: 100%
+header
+	min-height: 436px
+	margin: 0 0 25px
+
+	background:
+		image: url('../images/slide_contato.jpg')
+		position: top center
+		repeat: no-repeat
+		color: $preto
+
+	h1
+		margin-top: 120px !important
+
+.contato 
+	
+	form
+
+		+make-row
+		+clearfix
+		+make-sm-column(6)
+		+make-sm-column-offset(1)
+
+		button
+			background-color: transparent
+			margin: 35px auto auto auto
+			+make-sm-column-offset(7)
+
+			+breakpoint($tablet)
+				background-color: $verde	
+				+make-sm-column-offset(5)
+
+
+		.bg-success,
+		.bg-danger	
+			padding: 10px
+			+font-size(25px)
+			font-weight: $bold	
+			+make-sm-column(18)
+			
+	
+
+		input,
+		select,
+		textarea
+			padding: 10px
+			margin-top: 35px
+			border: 2px solid $cinza-claro
+			text-transform: uppercase
+			+transition(.5s)
+			//background-color: $preto
+
+			&:hover
+				border-color: $verde
+		
+			&:focus
+				border-color: $azul-claro
+				
+		select 
+			height: 45px
+
+		textarea
+			+make-sm-column(18)
+
+
+	
+
+
+
+.dados
+	+make-sm-column(3)	
+	+make-sm-column-offset(8)
+	//background-color: $preto
+	margin-top: -715px
+
+
+	p 
+		font-size: 18px	
+
+		[class^="fab fa-whatsapp"]
+			color: $verde
+			font-weight: $bold
+
+		[class^="fas fa-envelope"]
+			color: red
+				
+
+	
+	.col 
+		width: 319px
+		//background-color: red	
+
+
+	
+
+	+breakpoint($tablet)
+		//background-color: $azul
+		margin: auto auto 30px auto
+		+font-size(8px)
+		+make-sm-column-offset(0)	
+		margin-top: 30px

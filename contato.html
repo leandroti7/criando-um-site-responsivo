@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<!-- importando o view port do site do bootstrap para estilizar no dispositivo mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Criando um site responsivo</title>
+	<!--linkando o geral.css -->
+	<link rel="stylesheet" href="css/geral.css">
+	<!-- Linkando o plugins.css-->
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="css/contato.css">
+
+</head>
+<body>
+	<header>
+		<!--Classe do logo e um link da pagina index-->
+		<div class="container">
+			<div class="logo">
+				<a href="index.html">
+					<img src="images/Logo.svg" alt="Logo topo C">
+				</a>
+			</div>
+			
+
+			<div class="links">
+				<!--Menu bar di Site-->
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="portifolio.html">Portifólio</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+				
+				<!--Icones de Rede Social utilizando o link do Font Awesome<-->
+				<ul class="social">
+					<li>
+						<a href="#"><i class="fab fa-github-alt"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</li>
+				</ul>
+			</div>
+			
+			<!--Chama do Topo do Site-->
+			<h1>Fale <strong>Comigo</strong></h1>
+
+			<p>Contatos</p>
+		</div>
+
+	</header>
+
+	<main>
+		<section class="contato">
+			<div class="container">
+				<form>
+									
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="Nome" required>
+						</div>
+					
+	
+					
+						<div class="form-group">
+							<input class="form-control" type="email" placeholder="E-mail">
+						</div>
+					
+	
+					
+						<div class="form-group">
+							<input class="form-control" type="number" placeholder="Telefone">
+						</div>
+					
+	
+					
+						<div class="form-group">
+							<select class="form-control" >
+								<option>Selecione uma opção</option>
+								<option>Orçamento</option>
+								<option>Sugestão</option>
+								<option>Outras informações</option>
+							</select>
+						</div>	
+						
+						<div class="form-group">
+							<textarea placeholder="Preencha suas dúvidas" class="form-control" rows="10"></textarea>
+						</div>
+
+						<div class="form-group">
+							<button class="botao medio"><i class="fas fa-arrow-right"></i> Enviar Contatos</button>		
+						</div>
+
+						<p class="bg-success"><i class="fas fa-info-circle"></i> Seu contato foi enviado com sucesso</p>
+						<p class="bg-danger"><i class="fas fa-info-circle"></i> Preencha todos os campos obrigatórios</p>
+
+				</form>
+
+				<div class="dados">
+							<p class="col"><i class="fab fa-whatsapp"></i> (011) 95837-8662</p>
+							<p class="col"><i class="fas fa-envelope"></i> leandrosouza.dasilva14@gmail.com</p>
+				</div>
+			
+			</div>
+		</section>
+
+	</main>
+	<footer>
+		<!--Logo do rodapé e direitos autorais-->
+		<div class="logo-rodape">
+			<a href="index.html"><img src="images/logo-rodape.svg" alt="Logo Rodapé"></a>
+
+			<p>2018 Todos os Direitos Reservados</p>
+		</div>
+	</footer>
+
+</body>
+</html>
