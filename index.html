@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/home.css">
 
 </head>
+
 <body>
 	<header>
 		<!--Classe do logo e um link da pagina index-->
@@ -46,6 +47,14 @@
 					<li>
 						<a href="#"><i class="fab fa-linkedin-in"></i></a>
 					</li>
+				
+
+					<a class="toogle" href="javascript:;">
+							<span></span>
+							<span></span>
+							<span></span>
+					</a>
+
 				</ul>
 			</div>
 			
@@ -53,12 +62,23 @@
 			<h1><strong>Leandro</strong> S. <strong>Silva</strong></h1>
 
 			<p>Code // Share // Reboot</p>
+
 		</div>
 
 	</header>
+
+	<nav class="menu-responsivo"> <!--menu responivo para dispositivos moveis-->
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="sobre.html">Sobre</a></li>
+			<li><a href="portifolio.html">Portifólio</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</nav>
+			
 	
 
-	<main>
+	<main class="layout">
 		<section class="sobre">
 			<div class="container">
 				<!--Div Com circulos de icones do miolo do site utilizando o link FOnt awesome-->
@@ -108,5 +128,17 @@
 		</div>
 	</footer>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function(){
+
+			$('.toogle').click(function(){
+				$('.layout').toggleClass('ativo')
+				$('.menu-responsivo').toggleClass('ativo')
+				$('.toogle').toggleClass('ativo')
+
+			});	
+		});
+	</script>
 </body>
 </html>

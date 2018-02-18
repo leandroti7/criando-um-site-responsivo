@@ -2,6 +2,7 @@ header
 	+clearfix
 	min-height: 521px
 	position: relative
+	z-index: 1
 
 	&:after
 		content: ""
@@ -10,7 +11,7 @@ header
 		bottom: 0
 		width: 100%
 		height: 44px
-		+gradient(130deg, $verde, $azul)
+		+gradient(100deg, $verde, $azul)
 
 	background:
 		image: url('../images/slide_index-1.jpg') //linkando o slide do topo
@@ -26,7 +27,17 @@ header
 		margin: 40px 0 0 0
 		img
 			width: 197px
-			heigth: 134px
+			
+
+		+breakpoint($tablet)
+			img
+				width: 167px
+
+		+breakpoint($celular)
+			img
+				width: 150px
+			
+
 
 	.links // propriedades do menu bar 
 		float: right
@@ -49,21 +60,38 @@ header
 					a
 						color: $branco // Chamando a cor da variavel 
 						text-transform: uppercase
-
+						
+						&:hover,
+						&:focus
+							background-color: rgba($branco, .6)
 		.social
-			li
-				display: inline-block
-				margin: 0 10px 0 0
-				a
-					color: $branco
-					display: block
-					border: 1px solid $branco
-					padding: 4px
-					width: 25px
-					height: 25px
-					line-height: 12px
-					text-align: center
-					+border-radius(120px)
+				//border: 1px solid $branco
+				li
+					display: inline-block
+					margin: 0 10px 0 0
+
+				
+					a
+						color: $branco
+						display: block
+						border: 1px solid $branco
+						padding: 4px
+						width: 25px
+						height: 25px
+						line-height: 12px
+						text-align: center
+						+border-radius(120px)
+
+					+breakpoint($celular)
+						display: block
+						margin-bottom: 10px
+						margin-right: 0
+						padding-left: 2px
+
+						
+
+
+					   
 
 	h1 
 		clear: both

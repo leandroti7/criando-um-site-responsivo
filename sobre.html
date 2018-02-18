@@ -46,7 +46,15 @@
 					<li>
 						<a href="#"><i class="fab fa-linkedin-in"></i></a>
 					</li>
+
+					<a class="toogle" href="javascript:;">
+							<span></span>
+							<span></span>
+							<span></span>
+					</a>
 				</ul>
+
+				
 			</div>
 			
 			<!--Chama do Topo do Site-->
@@ -56,9 +64,18 @@
 		</div>
 
 	</header>
+
+	<nav class="menu-responsivo"> <!--menu responivo para dispositivos moveis-->
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="sobre.html">Sobre</a></li>
+			<li><a href="portifolio.html">Portifólio</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</nav>
 	
 
-	<main>
+	<main class="layout">
 		<section class="sobre">
 			<div class="container">
 				
@@ -100,6 +117,18 @@
 			<p>2018 Todos os Direitos Reservados</p>
 		</div>
 	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function(){
+
+			$('.toogle').click(function(){
+				$('.layout').toggleClass('ativo')
+				$('.menu-responsivo').toggleClass('ativo')
+				$('.toogle').toggleClass('ativo')
+			});	
+		});
+	</script>
 
 </body>
 </html>
