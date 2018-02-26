@@ -12,6 +12,9 @@ header
 		margin-top: 120px !important
 
 .contato 
+	p
+		display: block
+		margin-bottom: 20px
 	
 	form
 
@@ -20,7 +23,7 @@ header
 		+make-sm-column(6)
 		+make-sm-column-offset(1)
 
-		button
+		input[type="submit"]
 			background-color: transparent
 			margin: 35px auto auto auto
 			+make-sm-column-offset(7)
@@ -44,7 +47,7 @@ header
 		textarea
 			padding: 10px
 			margin-top: 35px
-			border: 2px solid $cinza-claro
+			//border: 2px solid $cinza-claro
 			text-transform: uppercase
 			+transition(.5s)
 			//background-color: $preto
@@ -60,6 +63,8 @@ header
 
 		textarea
 			+make-sm-column(18)
+			
+			
 
 
 	
@@ -70,7 +75,7 @@ header
 	+make-sm-column(3)	
 	+make-sm-column-offset(8)
 	//background-color: $preto
-	margin-top: -715px
+	margin-top: -500px
 
 
 	p 

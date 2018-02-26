@@ -1,7 +1,4 @@
 <?
-	//ativando suporte a imagem destacada
-	 add_theme_support('post-thumbnails');
-
 	//ativando menus dinamicos 
 	 function register_menus(){
 	 	register_nav_menus(
@@ -30,5 +27,15 @@
 	 	);
 	 }
 	 add_action('init', 'meus_posts_types');
+
+	 //Tamanho dinamicos para os thumbs
+	 function tamanhos_thumbs(){
+	 	//ativando suporte a imagem destacada
+	 	add_theme_support('post-thumbnails');
+	 	add_image_size('portifolio-thumb', 265, 150, true);
+
+
+	 }
+	 add_action('after_setup_theme','tamanhos_thumbs');
 
 ?>

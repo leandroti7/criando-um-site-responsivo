@@ -14,6 +14,7 @@
 	<!-- link do script Jquery da animação do meno toggle-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="<?bloginfo('template_url')?>/bower_components/wow/dist/wow.min.js"></script>
+	<script src="<?bloginfo('template_url');?>/bower_components/lightbox2/dist/js/lightbox.min.js"></script>
 	<script>
 		$(function(){ 
 			$('.toogle').click(function(){//função do botão toggle que da ação no menu responsivo
@@ -23,7 +24,9 @@
 			});	
 			new WOW().init(); 	
 
+
 		});
 	</script>
+	<?wp_footer();?>
 </body>
 </html>

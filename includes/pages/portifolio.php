@@ -1,57 +1,26 @@
 <section class="portifolio">
-				<div class="container">
-					<ul>
+	<div class="container">
+					
+		<? query_posts('post_type=post');?>
+				<ul>
+					
+					<?while(have_posts()): the_post(); ?>
 						<li>
 							<figure class="imghvr-blur">
-								<img src="http://placekitten.com/430/220" alt="Thumb">
+								<img src="<? the_post_thumbnail_url('portifolio-thumb');?>" alt="Thumb">
 									<figcaption>
-										<a href="#">
-											<h3>Nome da Imagem</h3>
-											<p>Efeito Hover</p>
+										<a href="<? the_post_thumbnail_url();?>" data-lightbox="roadtrip" data-title="<? the_content();?>">
+											<h3><? the_title();?></h3>
+											<p><? the_content();?></p>
 										</a>
 										<div class="overlay"></div>
-									</figcaption>
+									</figcaption>	
 							</figure>
-						</li>
+						</li>			
+					<?endwhile;?>
 
-						<li>
-							<figure class="imghvr-blur">
-								<img src="http://placekitten.com/430/220" alt="Thumb">
-									<figcaption>
-										<a href="#">
-											<h3>Nome da Imagem</h3>
-											<p>Efeito Hover</p>
-										</a>
-										<div class="overlay"></div>
-									</figcaption>
-							</figure>
-						</li>
+				</ul>
+		<? wp_reset_query(); ?>
 
-						<li>
-							<figure class="imghvr-blur">			
-								<img src="http://placekitten.com/430/220" alt="Thumb">
-									<figcaption>
-										<a href="#">
-											<h3>Nome da Imagem</h3>
-											<p>Efeito Hover</p>
-										</a>
-										<div class="overlay"></div>
-									</figcaption>
-							</figure>
-						</li>
-
-						<li>
-							<figure class="imghvr-blur">
-								<img src="http://placekitten.com/430/220" alt="Thumb">
-									<figcaption>
-										<a href="#">
-											<h3>Nome da Imagem</h3>
-											<p>Efeito Hover</p>
-										</a>
-										<div class="overlay"></div>
-									</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-			</section>	
+	</div>
+</section>	
