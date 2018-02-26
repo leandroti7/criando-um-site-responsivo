@@ -12,9 +12,6 @@ header
 		margin-top: 120px !important
 
 .contato 
-	p
-		display: block
-		margin-bottom: 20px
 	
 	form
 
@@ -27,9 +24,9 @@ header
 			background-color: transparent
 			margin: 35px auto auto auto
 			+make-sm-column-offset(7)
+			border: 2px solid #000
 
-			+breakpoint($tablet)
-				background-color: $verde	
+			+breakpoint($tablet)	
 				+make-sm-column-offset(5)
 
 
@@ -47,7 +44,7 @@ header
 		textarea
 			padding: 10px
 			margin-top: 35px
-			//border: 2px solid $cinza-claro
+			border: 2px solid $cinza-claro
 			text-transform: uppercase
 			+transition(.5s)
 			//background-color: $preto
@@ -63,6 +60,7 @@ header
 
 		textarea
 			+make-sm-column(18)
+			margin-bottom: 10px
 			
 			
 
@@ -75,7 +73,7 @@ header
 	+make-sm-column(3)	
 	+make-sm-column-offset(8)
 	//background-color: $preto
-	margin-top: -500px
+	margin-top: -700px
 
 
 	p 
