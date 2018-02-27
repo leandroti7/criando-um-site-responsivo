@@ -8,8 +8,16 @@
 	<title><? bloginfo('name'); echo " | "; bloginfo('description');?></title> 
 	<!--linkando o geral.css |  Utilizando o template_url para acessar os arquivos da raiz do site na pasta Wordpress-->
 	<link rel="stylesheet" href="<?bloginfo('template_url')?>/css/geral.css">
-	<!-- linkando o wow js e lightbox2.min.css-->
-	<link rel="stylesheet" type="text/css" href="<?bloginfo('template_url')?>/bower_components/lightbox2/dist/css/lightbox.min.css">
+
+	<? if(is_page('portifolio')):?>
+		<!-- linkando o wow js e lightbox2.min.css-->
+		<link rel="stylesheet" type="text/css" href="<?bloginfo('template_url')?>/bower_components/lightbox2/dist/css/lightbox.min.css">
+	<? endif; ?>	
+
+	<?if(is_front_page()):?>
+		<link rel="stylesheet" href="<?bloginfo('template_url')?>/bower_components/slick-carousel/slick/slick-theme.css">
+		<link rel="stylesheet" href="<?bloginfo('template_url')?>/bower_components/slick-carousel/slick/slick.css">
+	<?endif;?>	
 	<!-- linkando o wow js e animate.css-->
 	<link rel="stylesheet" type="text/css" href="<?bloginfo('template_url')?>/bower_components/wow/css/libs/animate.css">
 	<!-- Linkando o plugins.css-->
@@ -18,7 +26,7 @@
 	<? wp_head(); ?>
 </head>
 
-<body>
+<body <?body_class();?>>
 
 		<style>
 			<?if (get_the_post_thumbnail()):?>
@@ -69,12 +77,34 @@
 
 				</ul>
 			</div>
+	
+			<div class="slide">
+				<?if(is_front_page()):?>
+					<?
+						query_posts('post_type=slide');
+						while(have_posts()): the_post();
+
+					?>
+						<div class="item">
+							<h1> <? the_title();?> </h1>
+							<p> <? the_content();?></p>
+						</div>
+
+					<?
+						endwhile;
+						wp_reset_query();
+					?>
+				<?else:?>
+			</div>
+
+
 			
-			<!--Chama do Topo do Site-->
-			<h1> <? echo $chamada ?> </h1>
+						<!--Chama do Topo do Site-->
+						<h1> <? echo $chamada ?> </h1>
 
-			<p>Code // Share // Reboot</p>
-
+						<p>Code // Share // Reboot</p>
+			<?endif;?>
+			
 		</div>
 
 	</header>

@@ -25,6 +25,39 @@
 	 			'supports'			=> array('title', 'thumbnail', 'page-attributes'),
 	 		)
 	 	);
+
+	 	//Slides
+	 	register_post_type('slide',
+	 		array(
+	 			'labels' 			=> array(
+	 				'name'      	=> __('Slides'),
+	 				'singular_name' => __('Slide')
+	 				),
+	 			'public'            => true,
+	 			'has_archive'		=> true,
+	 			'menu_icon'			=> 'dashicons-format-gallery',
+	 			'supports'			=> array('title', 'page-attributes', 'editor'),
+
+	 		)
+	 	);
+
+	 	//Chamadas
+	 	register_post_type('chamada',
+	 		array(
+	 			'labels' 			=> array(
+	 				'name'      	=> __('Chamadas'),
+	 				'singular_name' => __('Chamada')
+	 				),
+	 			'public'            => true,
+	 			'has_archive'		=> true,
+	 			'menu_icon'			=> 'dashicons-align-center',
+	 			'supports'			=> array('title', 'page-attributes', 'editor'),
+
+	 		)
+	 	);
+
+
+
 	 }
 	 add_action('init', 'meus_posts_types');
 
