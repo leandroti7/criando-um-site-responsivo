@@ -18,7 +18,8 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "sass-flex-mixin": "^1.0.3",
-    "lightbox2": "lightbox#^2.10.0"
+    "lightbox2": "lightbox#^2.10.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "imagehover.css": "*",
